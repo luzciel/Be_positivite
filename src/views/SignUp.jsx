@@ -3,7 +3,7 @@ import PhoneTemplateSignUp from '../components/PhoneTemplateSignUp';
 import TemplateSignUp from '../components/TemplateSignUp';
 import WelcomeBox from '../components/WelcomeBox';
 
-const SignUp = () => {
+const SignUp = (props) => {
   return (
     <div>
     <section className="container-signUp">
@@ -14,8 +14,8 @@ const SignUp = () => {
         <TemplateSignUp />
       </div>
       </section>
-      <section className="container-phone-signUp">
-        <PhoneTemplateSignUp />
+      <section className="container-phone container-phone-signUp">
+        <PhoneTemplateSignUp handleModal={props.handleModal}/>
       </section>
 
     </div>

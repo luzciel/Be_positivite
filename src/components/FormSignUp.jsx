@@ -7,11 +7,16 @@ import Password from './Password';
 const FormSignUp = () => {
   return (
     <Fragment>
-      <h4>Registrarse en be positivite</h4>
+      <h4 className="title">Registrarse en be positivite</h4>
       <EmailUsername />
       <div className="form-seccion">
         <p className="label">Nombre</p>
-        <input type="text" className="form-control" placeholder="Ingresa nombre" required />
+        <input
+          type="text"
+          className="form-control"
+          placeholder="Ingresa nombre"
+          required
+        />
       </div>
       <Password />
       <label className="form-accept-conditions">
@@ -19,7 +24,9 @@ const FormSignUp = () => {
         Aceptar términos y condiciones
       </label>
       <Link to="/SignIn/?registration=true">
-      <button className="btn btn-primary-desktop btn-sign-up">Crear una cuenta</button>
+        <button id="btnSignUp" className="btn btn-primary-desktop btn-sign-up">
+          Crear una cuenta
+        </button>
       </Link>
     </Fragment>
   );

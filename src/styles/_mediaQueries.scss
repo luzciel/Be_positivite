@@ -1,40 +1,15 @@
 @use 'base';
 
-@media screen and (max-width: 600px) and (min-width: 320px) {
-  .container-home {
+@media screen and (max-width: 800px) and (min-width: 320px) {
+  .container-home-desktop {
     display: none !important;
   }
   .container-home-phone {
     display: block !important;
-    width: 100vw;
-    height: 100vh;
-    background-color: base.$primary-luna;
+  }
 
-    .home-phone-logos {
-      padding: 6rem 1.5rem 0 1.5rem;
-      display: flex;
-      flex-direction: column;
-
-      figure {
-        margin: 0;
-        display: flex;
-        justify-content: center;
-
-        img {
-          width: 16rem;
-        }
-      }
-    }
-
-    .home-phone-body {
-      .btn-phone-logIn {
-        width: 100%;
-        height: 3rem;
-        margin-bottom: 1rem;
-        color: base.$secondary-dobby;
-        background-color: base.$primary-harry;
-      }
-    }
+  .container-signIn-phone {
+    display: block !important;
   }
 
   .container-signUp {

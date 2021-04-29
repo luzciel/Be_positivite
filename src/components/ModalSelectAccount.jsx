@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { Icon } from '@iconify/react';
+import appleIcon from '@iconify/icons-logos/apple';
+import facebookIcon from '@iconify/icons-brandico/facebook';
+import googleIcon from '@iconify/icons-logos/google-icon';
 
 const ModalSelectAccount = (props) => {
   const [displayModal, setDisplayModal] = useState('none');
@@ -12,24 +16,23 @@ const ModalSelectAccount = (props) => {
   }, [props.open]);
 
   const closeModal = () => {
-    console.log('cierrate');
     props.handleModal();
   };
 
   return (
     <section className="modal" style={{ display: displayModal }}>
       <div className="modal-content">
-        <hr />
+        <hr className= "modal-top-line"/>
         <div className="modal-top">
-          <span id="close" className="modal-close" onClick={() => closeModal()}>
-            &times;
-          </span>
-          <p>Selecciona tu cuenta</p>
+          <p className="modal-close" onClick={() => closeModal()}>X</p>
+          <div>
+          <p className="modal-title">Selecciona tu cuenta</p>
+          </div>
         </div>
-        <div className="modal-btn">
-          <button className="btn btn-apple">Continua con Apple ID</button>
-          <button className=" btn btn-facebook">Continua con Facebook</button>
-          <button className="btn btn-google">Continua con Google</button>
+        <div className="modal-wrapper-btn">
+          <button className="btn modal-btn btn-apple"><Icon icon={appleIcon} className="icon-btn" /> Continua con Apple ID</button>
+          <button className="btn modal-btn btn-facebook"><Icon  icon={facebookIcon} className="icon-btn" style={{color: '#215e99'}} /> Continua con Facebook</button>
+          <button className="btn modal-btn btn-google"><Icon icon={googleIcon} className="icon-btn" /> Continua con Google</button>
         </div>
       </div>
     </section>

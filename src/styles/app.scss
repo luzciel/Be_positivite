@@ -31,6 +31,53 @@
   }
 }
 
+%formPhone {
+  .title {
+    font-family: 'Avenir-Roman';
+    font-weight: 600;
+    font-size: calc(0.81em + 1vw);
+    margin: 1.5% 0;
+  }
+  .form-seccion {
+    .label {
+      font-family: 'Avenir-Medium';
+      font-weight: 500;
+      font-size: 0.75rem;
+      color: base.$primary-harry;
+      margin-top: 1rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .form-control {
+      font-family: 'Avenir-Regular';
+      font-weight: 400;
+      color: base.$secondary-severus;
+      border: 0.7px solid base.$secondary-voldemort;
+      box-sizing: border-box;
+      border-radius: 4px;
+      width: 100%;
+      height: 6.6vh;
+      font-size: 0.775rem;
+      padding-left: 0.8rem;
+
+      #password {
+        font-size: 0.85rem;
+      }
+    }
+  }
+  .container-forgot-password {
+    display: flex;
+    justify-content: flex-end;
+    p {
+      color: base.$primary-harry;
+      font-family: 'Avenir-Medium';
+      font-weight: 500;
+      font-size: 0.875rem;
+      margin-top: 1rem;
+      margin-bottom: 1.7rem;
+    }
+  }
+}
 %paragraph {
   font-family: 'Avenir-Medium';
   font-weight: 500;
@@ -65,44 +112,180 @@
 }
 
 // Inicio desktop
-.container-home {
-  @extend %template;
+.home {
+  .container-home-desktop {
+    @extend %template;
 
-  .container-signIn {
-    padding: 9rem 7rem 0 6rem;
+    .container-signIn {
+      padding: 9rem 7rem 0 6rem;
 
-    .form-seccion {
-      @extend %form;
-    }
+      .form-seccion {
+        @extend %form;
+      }
 
-    .container-forgot-password {
-      padding: 0;
-      display: flex;
-      justify-content: flex-end;
+      .container-forgot-password {
+        padding: 0;
+        display: flex;
+        justify-content: flex-end;
 
-      .forgot-password {
+        .forgot-password {
+          @extend %paragraph;
+        }
+      }
+
+      .container-networks {
+        @extend %seccionIconsNetworks;
+      }
+
+      .container-new-user {
+        display: flex;
+        justify-content: center;
         @extend %paragraph;
+
+        a {
+          color: base.$primary-hermione;
+        }
       }
     }
+  }
+  .container-home-phone {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: base.$primary-luna;
 
-    .container-networks {
-      @extend %seccionIconsNetworks;
+    .home-phone-welcome {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+
+      .home-phone-logos {
+        padding: 6rem 1.5rem 0 1.5rem;
+        display: flex;
+        flex-direction: column;
+
+        figure {
+          margin: 0;
+          display: flex;
+          justify-content: center;
+
+          img {
+            width: 16rem;
+          }
+        }
+      }
+
+      .home-phone-body {
+        padding: 0 1.5rem;
+        padding: 1em 1.5rem 0;
+
+        p {
+          color: base.$primary-hermione;
+          margin-bottom: 0.7rem;
+        }
+
+        h4 {
+          margin-bottom: 1.7rem;
+        }
+
+        .btn-phone {
+          width: 100%;
+          height: 3.3em;
+          margin-bottom: 0.8rem;
+        }
+
+        .btn-phone-logIn {
+          background-color: base.$primary-harry;
+          color: base.$secondary-dobby;
+          border: 0.7px solid;
+        }
+        .btn-phone-accounts {
+          background-color: base.$primary-luna;
+          color: base.$primary-hermione;
+          border: 0.7px solid #ec552f;
+        }
+
+        .new-user {
+          margin: 3% 0 0;
+          text-align: center;
+          color: base.$primary-harry;
+          font-size: 0.8em;
+          a {
+            color: base.$primary-hermione;
+          }
+        }
+      }
+      footer {
+        display: flex;
+        padding-top: 0.8em;
+      }
     }
+  }
+}
 
-    .container-new-user {
+// Sing In phone
+.container-signIn-phone {
+  display: none;
+
+  .container-signIn-logo {
+    height: 27vh;
+    .icon-back {
+      margin-top: 0.8rem;
+    }
+    figure {
+      margin: 0;
       display: flex;
       justify-content: center;
-      @extend %paragraph;
+    }
+  }
+  .container-signIn-form {
+    @extend %formPhone;
+    #btnSignIn {
+      background-color: base.$primary-hermione;
+      border: 0.7px solid base.$primary-hermione;
+      font-family: 'Avenir-Roman';
+      font-size: 0.8em;
+      height: 2.9em;
+    }
+  }
+  .container-networks {
+    margin-top: 0.7rem;
+
+    .btn-open-networks {
+      background-color: base.$secondary-dobby;
+      color: base.$primary-harry;
+      border: 0.7px solid base.$primary-harry;
+      font-family: 'Avenir-Roman';
+      font-size: 0.8em;
+      height: 2.9em;
+    }
+  }
+  .container-new-user {
+    display: flex;
+    font-family: 'Avenir-Medium';
+    font-size: 0.75rem;
+    justify-content: center;
+    height: 12vh;
+    align-items: flex-end;
+    text-align: center;
+    color: base.$primary-harry;
+
+    .new-user {
+      text-align: center;
+      color: base.$primary-harry;
 
       a {
         color: base.$primary-hermione;
       }
     }
   }
-}
-
-.container-home-phone {
-  display: none;
+  .container-approved-registration {
+    border-radius: 15px 15px 0 1px;
+    text-align: center;
+    bottom: 0px;
+    left: 0;
+    height: 12vh;
+  }
 }
 
 // Registro desktop
@@ -137,4 +320,142 @@
 
 .container-phone-signUp {
   display: none;
+  .container-signIn-logo {
+    display: flex;
+    height: 20vh;
+    .icon-back {
+      margin-top: 0.8rem;
+    }
+    .wrap-logo-positive {
+      display: flex;
+      height: 21vh;
+      width: 80vh;
+      justify-content: center;
+
+      figure {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+  .container-signUp-form {
+    @extend %formPhone;
+    .form-accept-conditions {
+      color: base.$primary-hermione;
+      font-family: 'Avenir-Medium';
+      font-weight: 500;
+      font-size: 0.775rem;
+      margin-top: 1rem;
+      margin-bottom: 1.7rem;
+      input {
+        margin-top: 1rem;
+        margin-bottom: 1.3rem;
+      }
+    }
+    #btnSignUp {
+      background-color: base.$primary-hermione;
+      border: 0.7px solid base.$primary-hermione;
+      font-family: 'Avenir-Roman';
+      font-size: 0.8em;
+      height: 2.9em;
+    }
+  }
+  .container-enterokay {
+    display: flex;
+    font-family: 'Avenir-Medium';
+    font-size: 0.75rem;
+    justify-content: center;
+    height: 8.5vh;
+    align-items: flex-end;
+    text-align: center;
+    color: base.$primary-harry;
+    .enterokay-link {
+      color: base.$primary-hermione;
+    }
+  }
 }
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  padding-top: 143px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 108vh;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 100%;
+
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    background-color: base.$secondary-dobby;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 100vw;
+    height: 52vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    border-radius: 15px;
+
+    .modal-top-line {
+      background: #c8c8c8;
+      width: 23%;
+    }
+    .modal-top {
+      display: flex;
+
+      p {
+        margin: 0;
+      }
+      .modal-close {
+        color: base.$primary-harry;
+        padding-left: 1.3em;
+      }
+      .modal-title {
+        text-align: center;
+        width: 85vw;
+        font-size: 1.3em;
+        color: base.$primary-harry;
+        font-family: 'Avenir-Roman';
+        font-weight: 600;
+      }
+    }
+
+    .modal-wrapper-btn {
+      padding: 5vh 3vh;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+
+      .modal-btn {
+        background-color: base.$secondary-dobby;
+        color: base.$primary-harry;
+        text-align: center;
+        border: 0.7px solid base.$secondary-voldemort;
+        box-sizing: border-box;
+        border-radius: 4px;
+        margin-bottom: 2vh;
+        height: 7vh;
+
+        .icon-btn {
+          padding-right: 0.4em;
+          font-size: calc(0.8em + 1vh);
+        }
+      }
+    }
+  }
+}
+
+// left: 0;
+//     top: 0;
+//     width: 100vw;
+//     height: 11vh;
+//     padding-top: 0px;

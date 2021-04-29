@@ -7,6 +7,7 @@ $secondary-dobby: #ffffff;
 $secondary-ron: #fff7ed;
 $secondary-severus: #7f8e9d;
 $secondary-voldemort: #c7cad9;
+$secondary-draco: #4ca484;
 
 @font-face {
   font-family: 'Avenir-Regular';
@@ -28,6 +29,20 @@ $secondary-voldemort: #c7cad9;
   src: url(../assets/fonts/Metropolis-Medium.otf);
 }
 
+@font-face {
+  font-family: 'Avenir-Black';
+  src: url(../assets/fonts/AvenirLTStd-Black.otf);
+}
+@font-face {
+  font-family: 'Avenir-Book';
+  src: url(../assets/fonts/AvenirLTStd-Book.otf);
+}
+
+@font-face {
+  font-family: 'Avenir-Roman';
+  src: url(../assets/fonts/AvenirLTStd-Roman.otf);
+}
+
 a {
   text-decoration: none;
 }
@@ -35,7 +50,8 @@ a {
 h4 {
   font-family: 'SemiBold-Regular';
   color: $primary-hermione;
-  font-size: 1.5rem;
+  font-size: calc(1em + 1vw);
+  // font-size: 1.5rem;
   margin: 0 0 0.5rem;
 }
 
@@ -48,6 +64,18 @@ h5 {
   line-height: 1.5rem;
 }
 
+hr {
+  background-color: $primary-harry;
+  width: 36%;
+  height: 0.7vh;
+  border-radius: 100px;
+}
+.container-phone {
+  max-width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  padding: 0 1.5rem;
+}
 .btn {
   width: 100%;
   border-radius: 4px;
@@ -98,6 +126,32 @@ h5 {
 .container-approved-registration {
   z-index: 1;
   position: absolute;
-  background: green;
+  background: $secondary-draco;
+  color: $secondary-dobby;
   width: 100%;
+}
+
+#password {
+  border: none;
+  outline: none;
+}
+
+#container-password {
+  padding: 0 0.8rem 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.container-networks {
+  margin-top: 0.7rem;
+
+  .btn-open-networks {
+    background-color: $secondary-dobby;
+    color: $primary-harry;
+    border: 0.7px solid $primary-harry;
+    font-family: 'Avenir-Roman';
+    font-size: 0.8em;
+    height: 2.9em;
+  }
 }

@@ -8,6 +8,8 @@ const TemplateSignIn = () => {
   return (
     <Fragment>
       <section>
+        <h4>Bienvenido</h4>
+        <h5 className="title">Inicie sesión ingresando su cuenta aquí</h5>
         <FormSignIn />
       </section>
       <section className="container-networks">

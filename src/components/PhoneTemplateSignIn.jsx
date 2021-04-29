@@ -1,24 +1,27 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-
 import FormSignIn from './FormSignIn';
-import ModalSelectAccount from './ModalSelectAccount';
+import LogoBePositive from './LogoBePositive';
+import IconBack from '../assets/img/Icon-back.svg'
 
-const PhoneTemplateSignIn = () => {
-  const [openModal, setOpenModal] = useState(false);
 
-  const handleModal = () => {
-    console.log(openModal);
-    setOpenModal(!openModal);
-  };
+const PhoneTemplateSignIn = (props) => {
+
 
   return (
     <Fragment>
-      <section>
+      <section className="container-signIn-logo">
+        <Link to="/" className="icon-back">
+        <img src={IconBack} className="icon-back"  alt="icon-back"/>
+        </Link>
+      <LogoBePositive />
+      </section>
+      <section className="container-signIn-form">
+         <h5 className="title">Inicie sesión para utilizar la aplicación</h5>
         <FormSignIn />
       </section>
       <section className="container-networks">
-        <button className="btn" onClick={() => handleModal()}>
+        <button className="btn btn-open-networks" onClick={() => props.handleModal()}>
           {' '}
           Iniciar sesión con otra cuenta
         </button>
@@ -31,7 +34,10 @@ const PhoneTemplateSignIn = () => {
           </span>
         </p>
       </section>
-      <ModalSelectAccount open={openModal} handleModal={handleModal} />
+      <footer>
+        <hr />
+      </footer>
+      {/* <ModalSelectAccount open={openModal} handleModal={handleModal} /> */}
     </Fragment>
   );
 };
