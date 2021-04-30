@@ -19,10 +19,10 @@ const FormSignUp = () => {
         />
       </div>
       <Password />
-      <label className="form-accept-conditions">
-        <input type="checkbox" value="checkbox" />
+      <div className="form-accept-conditions">
+        <input type="checkbox"  className="conditions-input" value="checkbox" />
         Aceptar términos y condiciones
-      </label>
+      </div>
       <Link to="/SignIn/?registration=true">
         <button id="btnSignUp" className="btn btn-primary-desktop btn-sign-up">
           Crear una cuenta

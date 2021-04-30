@@ -17,24 +17,22 @@ const SignIn = (props) => {
     if (registration) {
       return (
         <div className="container-approved-registration">
-          <p>Felicidades te haz registrado <br/> exitosamente.</p>
+          <p>Felicidades te haz registrado exitosamente.</p>
         </div>
       );
     }
   };
 
   return (
-    <div>
-      <section className="container-home-desktop">
+    <div className="home">
         {approvedRegistration()}
-        <div>
+      <section className="container-home-desktop">
           <div className="container-welcome">
             <WelcomeBox />
           </div>
-          <div className="container-signIn">
+          <div className="container-signIn wrapper-box">
             <TemplateSignIn />
           </div>
-        </div>
       </section>
       <section className="container-phone container-signIn-phone">
         <PhoneTemplateSignIn handleModal={props.handleModal} />

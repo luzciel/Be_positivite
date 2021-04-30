@@ -37,7 +37,6 @@ const PhoneTemplateSignIn = (props) => {
       <footer>
         <hr />
       </footer>
-      {/* <ModalSelectAccount open={openModal} handleModal={handleModal} /> */}
     </Fragment>
   );
 };

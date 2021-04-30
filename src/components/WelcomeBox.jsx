@@ -11,7 +11,7 @@ const WelcomeBox = () => {
       </figure>
       <div className="welcome-text">
         <h2>
-          Gestiona tus seguidores <br></br> de forma segura
+          Gestiona tus seguidores <br /> de forma segura
         </h2>
       </div>
         <figure className="vector-happy">

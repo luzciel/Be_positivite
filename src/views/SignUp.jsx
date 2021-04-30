@@ -10,7 +10,7 @@ const SignUp = (props) => {
       <div className="container-welcome">
         <WelcomeBox />
       </div>
-     <div className="container-signIn-form">
+     <div className="container-signUp-form wrapper-box">
         <TemplateSignUp />
       </div>
       </section>
