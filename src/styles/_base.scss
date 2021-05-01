@@ -89,7 +89,7 @@ hr {
 }
 
 .btn-primary-desktop {
-  height: 3.3em;
+  height: 2.5rem;
   background-color: $primary-harry;
   color: $secondary-dobby;
   border: none;
@@ -99,7 +99,7 @@ hr {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 9rem 8rem 20rem;
-  height: 100vh;
+  height: auto;
   background-color: $primary-luna;
 
   .logo {
