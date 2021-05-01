@@ -28,7 +28,7 @@ const Password = () => {
        <p className="label">Contraseña</p>
        <div id="container-password" className="form-control">
         <Icon icon={eye} className="icon-password" onClick={() => togglePassword()} />
-       <input type={typePassword} id="password"  placeholder="Ingresa contraseña"  required />
+       <input type={typePassword} id="password" className="form-input" placeholder="Ingresa contraseña"  required />
        </div>
     </div>
   );

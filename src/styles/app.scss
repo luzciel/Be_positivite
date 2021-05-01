@@ -12,7 +12,6 @@
   .label {
     font-family: 'Avenir-Medium';
     font-weight: 500;
-    // font-size: 0.875rem;
     color: base.$primary-harry;
     margin-top: 1.3rem;
     margin-bottom: 0.5rem;
@@ -45,7 +44,7 @@
     font-family: 'Avenir-Roman';
     font-weight: 600;
     font-size: calc(0.81em + 1vw);
-    margin: 1.5% 0;
+    margin: 0.5vh 0 4vh;
   }
   .form-seccion {
     .label {
@@ -59,19 +58,26 @@
 
     .form-control {
       display: flex;
-      font-family: 'Avenir-Regular';
-      font-weight: 400;
       color: base.$secondary-severus;
       border: 0.7px solid base.$secondary-voldemort;
       box-sizing: border-box;
       border-radius: 4px;
       width: 100%;
       height: 6.6vh;
-      font-size: 0.775rem;
+      font-size: 0.8rem;
       padding-left: 0.8rem;
 
+      .form-input {
+        font-family: 'Avenir-Book';
+        font-size: 0.8rem;
+        border: none;
+        outline: none;
+        width: 80%;
+      }
+
       #password {
-        font-size: 0.85rem;
+        font-family: 'Avenir-Book';
+        font-size: 0.8rem;
       }
     }
   }
@@ -83,7 +89,8 @@
       font-family: 'Avenir-Medium';
       font-weight: 500;
       margin-top: 1rem;
-      margin-bottom: 1.8rem;
+      margin-bottom: 3.5vh;
+      font-size: 0.75rem;
     }
   }
 }
@@ -204,7 +211,6 @@
       height: 100vh;
 
       .home-phone-logos {
-        // padding: 21vh 1.5rem 0 1.5rem;
         display: flex;
         height: 118vh;
         justify-content: flex-end;
@@ -231,7 +237,7 @@
           height: 39vh;
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
+          justify-content: space-around;
 
           .welcome-text {
             font-family: 'Avenir-Roman';
@@ -267,7 +273,7 @@
             font-size: calc(0.5em + 1vh);
             color: base.$primary-harry;
             font-family: 'Avenir-Roman';
-            margin: 3% 0 0;
+            margin: 3vh 0 1vh;
             text-align: center;
             a {
               color: base.$primary-hermione;
@@ -287,55 +293,80 @@
 .container-signIn-phone {
   display: none;
 
-  .container-signIn-logo {
-    height: 27vh;
-    .icon-back {
-      margin-top: 0.8rem;
+  .wrapper-signIn-phone {
+    height: 100vh;
+    .container-signIn-logo {
+      height: 27vh;
+      .icon-back {
+        margin-top: 0.8rem;
+      }
+      figure {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+
+        img {
+          width: 20rem;
+          padding: 0 1rem;
+        }
+      }
     }
-    figure {
-      margin: 0;
+    .wrapper-contents {
       display: flex;
-      justify-content: center;
-    }
-  }
-  .container-signIn-form {
-    @extend %formPhone;
-    #btnSignIn {
-      background-color: base.$primary-hermione;
-      border: 0.7px solid base.$primary-hermione;
-      font-family: 'Avenir-Roman';
-      font-size: 0.8em;
-      height: 2.9em;
-    }
-  }
-  .container-networks {
-    margin-top: 0.7rem;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 73vh;
 
-    .btn-open-networks {
-      background-color: base.$secondary-dobby;
-      color: base.$primary-harry;
-      border: 0.7px solid base.$primary-harry;
-      font-family: 'Avenir-Roman';
-      font-size: 0.8em;
-      height: 2.9em;
-    }
-  }
-  .container-new-user {
-    display: flex;
-    font-family: 'Avenir-Medium';
-    font-size: 0.75rem;
-    justify-content: center;
-    height: 12vh;
-    align-items: flex-end;
-    text-align: center;
-    color: base.$primary-harry;
+      .wrapper-signIn-body {
+        padding: 1em 0 0;
+        height: 64vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
-    .new-user {
-      text-align: center;
-      color: base.$primary-harry;
+        .container-signIn-form {
+          @extend %formPhone;
+          #btnSignIn {
+            background-color: base.$primary-hermione;
+            border: 0.7px solid base.$primary-hermione;
+            font-family: 'Avenir-Roman';
+            font-size: 0.8em;
+            height: 2.9em;
+          }
+        }
+        .container-networks {
+          margin-top: 0.7rem;
 
-      a {
-        color: base.$primary-hermione;
+          .btn-open-networks {
+            background-color: base.$secondary-dobby;
+            color: base.$primary-harry;
+            border: 0.7px solid base.$primary-harry;
+            font-family: 'Avenir-Roman';
+            font-size: 0.8em;
+            height: 2.9em;
+          }
+        }
+        .container-new-user {
+          display: flex;
+          justify-content: center;
+          height: 12vh;
+          align-items: flex-end;
+          text-align: center;
+          color: base.$primary-harry;
+
+          .new-user {
+            text-align: center;
+            color: base.$primary-harry;
+            font-size: calc(0.6em + 0.6vh);
+            font-family: 'Avenir-Roman';
+            margin: 3vh 0 1vh;
+            text-align: center;
+
+            a {
+              color: base.$primary-hermione;
+            }
+          }
+        }
       }
     }
   }
@@ -345,122 +376,171 @@
     bottom: 0px;
     left: 0;
     height: 12vh;
+    p {
+      font-size: calc(0.75em + 0.1vh);
+      font-family: 'Avenir-Roman';
+      padding: 0 15vw;
+      line-height: 1.8em;
+    }
   }
 }
 
 // Registro desktop
-.container-signUp {
-  @extend %template;
+.signUp {
+  .container-signUp {
+    @extend %template;
 
-  .container-signUp-form {
-    padding: 19vh 8vw 0 12vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-
-    .wapper-top {
+    .container-signUp-form {
+      padding: 19vh 8vw 0 12vw;
       display: flex;
       flex-direction: column;
+      justify-content: space-around;
 
-      .form-seccion {
-        @extend %form;
+      .wapper-top {
+        display: flex;
+        flex-direction: column;
+
+        .form-seccion {
+          @extend %form;
+        }
+
+        .form-accept-conditions {
+          font-family: 'Avenir-Regular';
+          color: base.$primary-hermione;
+          font-size: calc(0.01em + 0.9vw);
+          margin-top: 0.5em;
+
+          .conditions-input {
+            margin-bottom: 1.8em;
+            margin-right: 0.6em;
+            -ms-transform: scale(1.3);
+            -moz-transform: scale(1.3);
+            -webkit-transform: scale(1.3);
+            -o-transform: scale(1.3);
+            transform: scale(1.3);
+            padding: 10px;
+          }
+        }
       }
+      .container-networks {
+        @extend %seccionIconsNetworks;
 
-      .form-accept-conditions {
-        font-family: 'Avenir-Regular';
-        color: base.$primary-hermione;
-        font-size: calc(0.01em + 0.9vw);
-        margin-top: 0.5em;
+        .netwoks-text {
+          margin-bottom: 1.2em;
+          color: base.$primary-hermione;
+          font-family: 'Avenir-Regular';
+          font-weight: 400;
+        }
+      }
+      .container-enterokay {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        @extend %paragraph;
 
-        .conditions-input {
-          margin-bottom: 1.8em;
-          margin-right: 0.6em;
-          -ms-transform: scale(1.3);
-          -moz-transform: scale(1.3);
-          -webkit-transform: scale(1.3);
-          -o-transform: scale(1.3);
-          transform: scale(1.3);
-          padding: 10px;
+        a {
+          color: base.$primary-hermione;
         }
       }
     }
-    .container-networks {
-      @extend %seccionIconsNetworks;
-
-      .netwoks-text {
-        margin-bottom: 1.2em;
-        color: base.$primary-hermione;
-        font-family: 'Avenir-Regular';
-        font-weight: 400;
-      }
-    }
-    .container-enterokay {
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      @extend %paragraph;
-
-      a {
-        color: base.$primary-hermione;
-      }
-    }
   }
-}
 
-.container-phone-signUp {
-  display: none;
-  .container-signIn-logo {
-    display: flex;
-    height: 20vh;
-    .icon-back {
-      margin-top: 0.8rem;
-    }
-    .wrap-logo-positive {
+  //Registro Phone
+  .container-phone-signUp {
+    display: none;
+    height: 100vh;
+
+    .container-signUp-logo {
+      height: 14vh;
       display: flex;
-      height: 21vh;
-      width: 80vh;
-      justify-content: center;
+      margin-bottom: 1vh;
 
-      figure {
-        margin: 0;
+      .wrapper-top {
         display: flex;
-        justify-content: center;
+        margin-top: 0.8rem;
+
+        .wrap-logo-positive {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 82vw;
+
+          figure {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            width: 43vh;
+
+            .logo-BePositive {
+              width: 20rem;
+              padding: 0 1rem;
+            }
+          }
+        }
       }
     }
-  }
-  .container-signUp-form {
-    @extend %formPhone;
-    .form-accept-conditions {
-      color: base.$primary-hermione;
-      font-family: 'Avenir-Medium';
-      font-weight: 500;
-      font-size: 0.775rem;
-      margin-top: 1rem;
-      margin-bottom: 1.7rem;
-      input {
-        margin-top: 1rem;
-        margin-bottom: 1.3rem;
+    .wrapper-contents {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 85vh;
+      .wrapper-body {
+        padding: 1em 0 0;
+        height: 78vh;
+        display: flex;
+        flex-direction: column;
+
+        justify-content: space-around;
+
+        .container-signUp-form {
+          @extend %formPhone;
+          .form-accept-conditions {
+            color: base.$primary-hermione;
+            font-family: 'Avenir-Medium';
+            font-weight: 500;
+            font-size: 0.775rem;
+            margin-top: 1rem;
+            margin-bottom: 1.7rem;
+            input {
+              margin-top: 1rem;
+              margin-bottom: 1.3rem;
+            }
+          }
+          #btnSignUp {
+            background-color: base.$primary-hermione;
+            border: 0.7px solid base.$primary-hermione;
+            font-family: 'Avenir-Roman';
+            font-size: 0.8em;
+            height: 2.9em;
+          }
+
+          .form-accept-conditions {
+            font-family: 'Avenir-Roman';
+            margin-bottom: 0.3em;
+            margin-top: 0.5em;
+          }
+        }
+        .container-enterokay {
+          display: flex;
+          justify-content: center;
+          height: 12vh;
+          align-items: flex-end;
+          text-align: center;
+          color: #215e99;
+          color: base.$primary-harry;
+          .enterokay-question {
+            text-align: center;
+            color: base.$primary-harry;
+            font-size: calc(0.6em + 0.6vh);
+            font-family: 'Avenir-Roman';
+            margin: 3vh 0 1vh;
+            text-align: center;
+          }
+          .enterokay-link {
+            color: base.$primary-hermione;
+          }
+        }
       }
-    }
-    #btnSignUp {
-      background-color: base.$primary-hermione;
-      border: 0.7px solid base.$primary-hermione;
-      font-family: 'Avenir-Roman';
-      font-size: 0.8em;
-      height: 2.9em;
-    }
-  }
-  .container-enterokay {
-    display: flex;
-    font-family: 'Avenir-Medium';
-    font-size: 0.75rem;
-    justify-content: center;
-    height: 8.5vh;
-    align-items: flex-end;
-    text-align: center;
-    color: base.$primary-harry;
-    .enterokay-link {
-      color: base.$primary-hermione;
     }
   }
 }

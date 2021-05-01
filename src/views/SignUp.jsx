@@ -5,19 +5,18 @@ import WelcomeBox from '../components/WelcomeBox';
 
 const SignUp = (props) => {
   return (
-    <div>
-    <section className="container-signUp">
-      <div className="container-welcome">
-        <WelcomeBox />
-      </div>
-     <div className="container-signUp-form wrapper-box">
-        <TemplateSignUp />
-      </div>
+    <div className="signUp">
+      <section className="container-signUp">
+        <div className="container-welcome">
+          <WelcomeBox />
+        </div>
+        <div className="container-signUp-form wrapper-box">
+          <TemplateSignUp />
+        </div>
       </section>
       <section className="container-phone container-phone-signUp">
-        <PhoneTemplateSignUp handleModal={props.handleModal}/>
+        <PhoneTemplateSignUp handleModal={props.handleModal} />
       </section>
-
     </div>
   );
 };

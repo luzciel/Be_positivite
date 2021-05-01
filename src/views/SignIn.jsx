@@ -25,8 +25,8 @@ const SignIn = (props) => {
 
   return (
     <div className="home">
-        {approvedRegistration()}
       <section className="container-home-desktop">
+        {approvedRegistration()}
           <div className="container-welcome">
             <WelcomeBox />
           </div>

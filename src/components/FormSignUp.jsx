@@ -11,16 +11,18 @@ const FormSignUp = () => {
       <EmailUsername />
       <div className="form-seccion">
         <p className="label">Nombre</p>
-        <input
-          type="text"
-          className="form-control"
-          placeholder="Ingresa nombre"
-          required
-        />
+        <div className="wrapper-input form-control">
+          <input
+            type="text"
+            className="form-input"
+            placeholder="Ingresa nombre"
+            required
+          />
+        </div>
       </div>
       <Password />
       <div className="form-accept-conditions">
-        <input type="checkbox"  className="conditions-input" value="checkbox" />
+        <input type="checkbox" className="conditions-input" value="checkbox" />
         Aceptar términos y condiciones
       </div>
       <Link to="/SignIn/?registration=true">
