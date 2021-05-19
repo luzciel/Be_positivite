@@ -8,7 +8,7 @@ import IconBack from '../assets/img/Icon-back.svg';
 const PhoneTemplateSignUp = (props) => {
   return (
     <div className="wrapper-signUp">
-      <section className="container-signUp-logo">
+      <div className="container-signUp-logo">
         <div className="wrapper-top">
           <Link to="/SignIn" className="icon-back">
             <img src={IconBack} className="icon-back" alt="icon-back" />
@@ -17,10 +17,10 @@ const PhoneTemplateSignUp = (props) => {
             <LogoBePositive />
           </div>
         </div>
-      </section>
+      </div>
       <div className="wrapper-contents">
         <div className="wrapper-body">
-          <section className="container-signUp-form">
+          <div className="container-signUp-form">
             <FormSignUp />
             <div className="container-networks">
               <button
@@ -30,8 +30,8 @@ const PhoneTemplateSignUp = (props) => {
                 Registrarse con otra cuenta
               </button>
             </div>
-          </section>
-          <section className="container-enterokay">
+          </div>
+          <div className="container-enterokay">
             <p className="enterokay-question">
               ¿Ya eres usuario?{' '}
               <span>
@@ -40,7 +40,7 @@ const PhoneTemplateSignUp = (props) => {
                 </Link>
               </span>
             </p>
-          </section>
+          </div>
         </div>
         <footer>
           <hr />

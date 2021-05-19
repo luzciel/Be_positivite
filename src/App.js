@@ -5,8 +5,7 @@ import {
   Route,
 } from 'react-router-dom';
 import ModalSelectAccount from './components/ModalSelectAccount';
-import './styles/app.scss';
-import './styles/PhoneApp.scss';
+import './styles/style.scss';
 import Home from './views/Home';
 import SignIn from './views/SignIn';
 import SignUp from './views/SignUp';

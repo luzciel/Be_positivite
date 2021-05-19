@@ -15,25 +15,6 @@ $secondary-draco: #4ca484;
 }
 
 @font-face {
-  font-family: 'SemiBold-Regular';
-  src: url(../assets/fonts/Metropolis-SemiBold.otf);
-  font-weight: 800;
-}
-@font-face {
-  font-family: 'Avenir-Light';
-  src: url(../assets/fonts/Metropolis-Light.otf);
-}
-
-@font-face {
-  font-family: 'Avenir-Medium';
-  src: url(../assets/fonts/Metropolis-Medium.otf);
-}
-
-@font-face {
-  font-family: 'Avenir-Black';
-  src: url(../assets/fonts/AvenirLTStd-Black.otf);
-}
-@font-face {
   font-family: 'Avenir-Book';
   src: url(../assets/fonts/AvenirLTStd-Book.otf);
 }
@@ -48,10 +29,8 @@ a {
 }
 
 h4 {
-  font-family: 'SemiBold-Regular';
   color: $primary-hermione;
   font-size: calc(0.4em + 1vw);
-  // font-size: 1.5rem;
   margin: 0 0 0.5rem;
 }
 
@@ -93,18 +72,19 @@ hr {
   background-color: $primary-harry;
   color: $secondary-dobby;
   border: none;
+  font-size: 0.7em;
+  cursor: pointer;
 }
 
+// Contenedor de bienvenida en desktop
 .container-welcome {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 9rem 8rem 20rem;
   height: auto;
-  background-color: $primary-luna;
+  background-color: #fbefec;
+  padding-left: 4em;
 
   .logo {
-    grid-column: 2/7;
     padding-top: 4rem;
+    margin: 0;
 
     .logo-BePositive {
       width: 13rem;
@@ -113,21 +93,30 @@ hr {
   }
 
   .welcome-text {
-    grid-column: 2/10;
+    width: 91%;
+    position: relative;
 
-    h2 {
-      font-family: 'Mulish', sans-serif;
-      color: $primary-harry;
-      font-size: 2.438rem;
-      line-height: 2.925rem;
-      margin-bottom: 0;
+    .vector-happy {
+      margin: 0;
+
+      h2 {
+        font-family: 'Mulish', sans-serif;
+        color: #215e99;
+        font-size: 2em;
+        line-height: 1.3em;
+        margin-bottom: 0;
+        position: absolute;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      img {
+        padding-left: 230px;
+        padding-top: 87px;
+        position: relative;
+      }
     }
-  }
-
-  .vector-happy {
-    grid-column: 6/10;
-    padding-left: 2.5rem;
-    margin: 0;
   }
 }
 
@@ -143,7 +132,6 @@ hr {
   outline: 1px solid $primary-harry;
   -moz-outline-radius: 25px;
   color: $secondary-severus;
-  // box-shadow: 0 0 3pt 2pt $primary-harry;
 }
 
 #password {

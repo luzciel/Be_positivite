@@ -6,17 +6,20 @@ const WelcomeBox = () => {
   return (
     <Fragment>
       <figure className="logo">
-        <img src={logoBePositive} className="logo-BePositive" alt="vector-happy"
+        <img
+          src={logoBePositive}
+          className="logo-BePositive"
+          alt="vector-happy"
         />
       </figure>
       <div className="welcome-text">
-        <h2>
-          Gestiona tus seguidores <br /> de forma segura
-        </h2>
-      </div>
         <figure className="vector-happy">
+          <h2>
+            Gestiona tus seguidores <br /> de forma segura
+          </h2>
           <img src={vectorHappy} alt="vector-happy" />
         </figure>
+      </div>
     </Fragment>
   );
 };

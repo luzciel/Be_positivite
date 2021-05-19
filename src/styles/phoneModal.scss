@@ -1,0 +1,80 @@
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 56vh;
+
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    background-color: base.$secondary-dobby;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 100vw;
+    height: 52vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    border-radius: 15px;
+
+    .modal-top-line {
+      background: #c8c8c8;
+      width: 15%;
+      height: 0.6em;
+      margin-bottom: 1.5em;
+    }
+    .modal-top {
+      display: flex;
+      align-items: center;
+
+      p {
+        margin: 0;
+      }
+      .modal-close {
+        color: base.$primary-harry;
+        padding-left: 1.3em;
+        font-size: calc(0.8em + 1vw);
+      }
+      .modal-title {
+        text-align: center;
+        width: 85vw;
+        font-size: 1.05em;
+        color: base.$primary-harry;
+        font-family: 'Avenir-Roman';
+        font-weight: 600;
+      }
+    }
+
+    .modal-wrapper-btn {
+      padding: 5vh 3vh;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+
+      .modal-btn {
+        background-color: base.$secondary-dobby;
+        color: base.$primary-harry;
+        text-align: center;
+        border: 0.7px solid base.$secondary-voldemort;
+        box-sizing: border-box;
+        border-radius: 4px;
+        margin-bottom: 2vh;
+        height: 7vh;
+
+        .icon-btn {
+          padding-right: 0.4em;
+          font-size: calc(0.8em + 1vh);
+        }
+      }
+    }
+  }
+}

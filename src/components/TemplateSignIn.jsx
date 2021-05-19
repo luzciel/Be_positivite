@@ -8,25 +8,24 @@ const TemplateSignIn = () => {
   return (
     <Fragment>
       <div className="wapper-top">
-      <section>
-        <h4>Bienvenido</h4>
-        <h5 className="title">Inicie sesión ingresando su cuenta aquí</h5>
-        <FormSignIn />
-      </section>
-      <section className="container-networks">
-        <p className="netwoks-text">O inicia sesión con otra cuenta</p>
-        <IconsNetworks />
-      </section>
-
+        <div>
+          <h4>Bienvenido</h4>
+          <h5 className="title">Inicie sesión ingresando su cuenta aquí</h5>
+          <FormSignIn />
+        </div>
+        <div className="container-networks">
+          <p className="netwoks-text">O inicia sesión con otra cuenta</p>
+          <IconsNetworks />
+        </div>
       </div>
-      <section className="container-new-user">
+      <div className="container-new-user">
         <p className="new-user">
           ¿Eres un nuevo usuario?{' '}
           <span>
             <Link to="/SignUp">Crear una cuenta</Link>
           </span>
         </p>
-      </section>
+      </div>
     </Fragment>
   );
 };

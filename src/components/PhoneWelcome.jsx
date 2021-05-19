@@ -6,31 +6,30 @@ const PhoneWelcome = (props) => {
   return (
     <Fragment>
       <div className="home-phone-welcome">
-        <section className="home-phone-logos">
-          {/* <LogoBePositive /> */}
+        <div className="home-phone-logos">
           <figure className="phone-logo-happy">
             <img src={LogoBePositive} alt="vector-happy" />
           </figure>
-        </section>
+        </div>
         <div className="wrapper">
-          <section className="home-phone-body">
-              <div>
-            <p className="welcome-text">Bienvenido!</p>
-            <h4 className="connect-followers-text">
-              Conecta con tus seguidores
-            </h4>
-            <Link to="/SignIn">
-              <button className="btn btn-phone btn-phone-logIn">
-                Iniciar Sesión
+          <div className="home-phone-body">
+            <div>
+              <p className="welcome-text">Bienvenido!</p>
+              <h4 className="connect-followers-text">
+                Conecta con tus seguidores
+              </h4>
+              <Link to="/SignIn">
+                <button className="btn btn-phone btn-phone-logIn">
+                  Iniciar Sesión
+                </button>
+              </Link>
+              <button
+                className="btn btn-phone btn-phone-accounts"
+                onClick={() => props.handleModal()}
+              >
+                Iniciar sesión con otra cuenta
               </button>
-            </Link>
-            <button
-              className="btn btn-phone btn-phone-accounts"
-              onClick={() => props.handleModal()}
-            >
-              Iniciar sesión con otra cuenta
-            </button>
-              </div>
+            </div>
             <div className="phone-new-user">
               <p className="new-user">
                 ¿Eres un nuevo usuario?{' '}
@@ -39,7 +38,7 @@ const PhoneWelcome = (props) => {
                 </span>
               </p>
             </div>
-          </section>
+          </div>
           <footer>
             <hr />
           </footer>

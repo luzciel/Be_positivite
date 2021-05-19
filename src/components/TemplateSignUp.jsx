@@ -8,22 +8,22 @@ const TemplateSignUp = () => {
   return (
     <Fragment>
       <div className="wapper-top">
-        <section>
+        <div>
           <FormSignUp />
-        </section>
-        <section className="container-networks">
+        </div>
+        <div className="container-networks">
           <p className="netwoks-text">O registrarse con otra cuenta</p>
           <IconsNetworks />
-        </section>
+        </div>
       </div>
-      <section className="container-enterokay">
+      <div className="container-enterokay">
         <p>
           ¿Ya eres usuario?{' '}
           <span>
             <Link to="/">Ingresar</Link>
           </span>
         </p>
-      </section>
+      </div>
     </Fragment>
   );
 };

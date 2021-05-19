@@ -27,12 +27,12 @@ const SignIn = (props) => {
     <div className="home">
       <section className="container-home-desktop">
         {approvedRegistration()}
-          <div className="container-welcome">
-            <WelcomeBox />
-          </div>
-          <div className="container-signIn wrapper-box">
-            <TemplateSignIn />
-          </div>
+        <div className="container-welcome">
+          <WelcomeBox />
+        </div>
+        <div className="container-signIn wrapper-box">
+          <TemplateSignIn />
+        </div>
       </section>
       <section className="container-phone container-signIn-phone">
         <PhoneTemplateSignIn handleModal={props.handleModal} />

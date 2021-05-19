@@ -1,4 +1,4 @@
-import React  from 'react';
+import React from 'react';
 import TemplateSignIn from '../components/TemplateSignIn';
 import WelcomeBox from '../components/WelcomeBox';
 import PhoneWelcome from '../components/PhoneWelcome';

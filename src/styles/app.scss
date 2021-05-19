@@ -1,5 +1,3 @@
-@use 'base';
-@import 'mediaQueries';
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@500;700&display=swap');
 
 %template {
@@ -8,6 +6,7 @@
   height: 100vh;
 }
 
+//Estilo para el form en desktop
 %form {
   .label {
     font-family: 'Avenir-Roman';
@@ -38,61 +37,6 @@
   }
 }
 
-%formPhone {
-  .title {
-    font-family: 'Avenir-Roman';
-    font-weight: 600;
-    font-size: calc(0.81em + 1vw);
-    margin: 0.5vh 0 4vh;
-  }
-  .form-seccion {
-    .label {
-      font-family: 'Avenir-Roman';
-      font-weight: 500;
-      font-size: 0.75rem;
-      color: base.$primary-harry;
-      margin-top: 1rem;
-      margin-bottom: 0.8rem;
-    }
-
-    .form-control {
-      display: flex;
-      color: base.$secondary-severus;
-      border: 0.7px solid base.$secondary-voldemort;
-      box-sizing: border-box;
-      border-radius: 4px;
-      width: 100%;
-      height: 6.6vh;
-      font-size: 0.8rem;
-      padding-left: 0.8rem;
-
-      .form-input {
-        font-family: 'Avenir-Book';
-        font-size: 0.8rem;
-        border: none;
-        outline: none;
-        width: 80%;
-      }
-
-      #password {
-        font-family: 'Avenir-Book';
-        font-size: 0.8rem;
-      }
-    }
-  }
-  .container-forgot-password {
-    display: flex;
-    justify-content: flex-end;
-    p {
-      color: base.$primary-harry;
-      font-family: 'Avenir-Roman';
-      font-weight: 500;
-      margin-top: 1rem;
-      margin-bottom: 3.5vh;
-      font-size: 0.75rem;
-    }
-  }
-}
 %paragraph {
   font-family: 'Avenir-Roman';
   font-weight: 500;
@@ -117,6 +61,7 @@
       width: 3em;
       margin: 0 13px;
       height: 3em;
+      cursor: pointer;
 
       img {
         width: 1.5rem;
@@ -128,23 +73,23 @@
 
 // Inicio desktop
 .home {
-  .container-approved-registration {
-    z-index: 1;
-    position: absolute;
-    background: #4ca484;
-    color: #ffffff;
-    width: 100vw;
-    height: 5vh;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-family: 'Avenir-Regular';
-    font-weight: 400;
-    font-size: calc(1em + 1vw);
-    align-items: center;
-  }
   .container-home-desktop {
     @extend %template;
+    .container-approved-registration {
+      z-index: 1;
+      position: absolute;
+      background: #4ca484;
+      color: #ffffff;
+      width: 100vw;
+      height: 5vh;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      font-family: 'Avenir-Regular';
+      font-weight: 400;
+      font-size: calc(1em + 1vw);
+      align-items: center;
+    }
 
     .container-signIn {
       padding: 21vh 8vw 1vh 12vw;
@@ -172,6 +117,7 @@
           .forgot-password {
             @extend %paragraph;
             margin-bottom: 1.8em;
+            cursor: pointer;
           }
         }
       }
@@ -196,189 +142,6 @@
           color: base.$primary-hermione;
         }
       }
-    }
-  }
-  .container-home-phone {
-    display: none;
-    background-color: base.$primary-luna;
-
-    .home-phone-welcome {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: column;
-      height: 100vh;
-
-      .home-phone-logos {
-        display: flex;
-        height: 118vh;
-        justify-content: flex-end;
-        flex-direction: column;
-        figure {
-          margin: 0;
-          display: flex;
-          justify-content: center;
-
-          img {
-            width: 18rem;
-            padding: 1rem;
-          }
-        }
-      }
-
-      .wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100vh;
-        .home-phone-body {
-          padding: 1em 0 0;
-          height: 39vh;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-around;
-
-          .welcome-text {
-            font-family: 'Avenir-Roman';
-            font-size: calc(0.6em + 1vh);
-            color: base.$primary-hermione;
-            margin-bottom: 0.7rem;
-          }
-
-          .connect-followers-text {
-            font-size: calc(0.8em + 1vw);
-            color: #ec552f;
-            margin: 0 0 1.6em;
-          }
-
-          .btn-phone {
-            width: 100%;
-            height: 3.3em;
-            margin-bottom: 0.8rem;
-          }
-
-          .btn-phone-logIn {
-            background-color: base.$primary-harry;
-            color: base.$secondary-dobby;
-            border: 0.7px solid;
-          }
-          .btn-phone-accounts {
-            background-color: base.$primary-luna;
-            color: base.$primary-hermione;
-            border: 0.7px solid #ec552f;
-          }
-
-          .new-user {
-            font-size: calc(0.5em + 1vh);
-            color: base.$primary-harry;
-            font-family: 'Avenir-Roman';
-            margin: 3vh 0 1vh;
-            text-align: center;
-            a {
-              color: base.$primary-hermione;
-            }
-          }
-        }
-      }
-      footer {
-        display: flex;
-        padding-top: 0.8em;
-      }
-    }
-  }
-}
-
-// Sing In phone
-.container-signIn-phone {
-  display: none;
-
-  .wrapper-signIn-phone {
-    height: 100vh;
-    .container-signIn-logo {
-      height: 27vh;
-      .icon-back {
-        margin-top: 0.8rem;
-      }
-      figure {
-        margin: 0;
-        display: flex;
-        justify-content: center;
-
-        img {
-          width: 20rem;
-          padding: 0 1rem;
-        }
-      }
-    }
-    .wrapper-contents {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 73vh;
-
-      .wrapper-signIn-body {
-        padding: 1em 0 0;
-        height: 64vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        .container-signIn-form {
-          @extend %formPhone;
-          #btnSignIn {
-            background-color: base.$primary-hermione;
-            border: 0.7px solid base.$primary-hermione;
-            font-family: 'Avenir-Roman';
-            font-size: 0.8em;
-            height: 2.9em;
-          }
-        }
-        .container-networks {
-          margin-top: 0.7rem;
-
-          .btn-open-networks {
-            background-color: base.$secondary-dobby;
-            color: base.$primary-harry;
-            border: 0.7px solid base.$primary-harry;
-            font-family: 'Avenir-Roman';
-            font-size: 0.8em;
-            height: 2.9em;
-          }
-        }
-        .container-new-user {
-          display: flex;
-          justify-content: center;
-          height: 12vh;
-          align-items: flex-end;
-          text-align: center;
-          color: base.$primary-harry;
-
-          .new-user {
-            text-align: center;
-            color: base.$primary-harry;
-            font-size: calc(0.6em + 0.6vh);
-            font-family: 'Avenir-Roman';
-            margin: 3vh 0 1vh;
-            text-align: center;
-
-            a {
-              color: base.$primary-hermione;
-            }
-          }
-        }
-      }
-    }
-  }
-  .container-approved-registration {
-    border-radius: 15px 15px 0 1px;
-    text-align: center;
-    bottom: 0px;
-    left: 0;
-    height: 12vh;
-    p {
-      font-size: calc(0.75em + 0.1vh);
-      font-family: 'Avenir-Roman';
-      padding: 0 15vw;
-      line-height: 1.8em;
     }
   }
 }
@@ -441,187 +204,4 @@
       }
     }
   }
-
-  //Registro Phone
-  .container-phone-signUp {
-    display: none;
-    height: 100vh;
-
-    .container-signUp-logo {
-      height: 14vh;
-      display: flex;
-      margin-bottom: 1vh;
-
-      .wrapper-top {
-        display: flex;
-        margin-top: 0.8rem;
-
-        .wrap-logo-positive {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 82vw;
-
-          figure {
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            width: 43vh;
-
-            .logo-BePositive {
-              width: 20rem;
-              padding: 0 1rem;
-            }
-          }
-        }
-      }
-    }
-    .wrapper-contents {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 85vh;
-      .wrapper-body {
-        padding: 1em 0 0;
-        height: 78vh;
-        display: flex;
-        flex-direction: column;
-
-        justify-content: space-around;
-
-        .container-signUp-form {
-          @extend %formPhone;
-          .form-accept-conditions {
-            color: base.$primary-hermione;
-            font-family: 'Avenir-Medium';
-            font-weight: 500;
-            font-size: 0.775rem;
-            margin-top: 1rem;
-            margin-bottom: 1.7rem;
-            input {
-              margin-top: 1rem;
-              margin-bottom: 1.3rem;
-            }
-          }
-          #btnSignUp {
-            background-color: base.$primary-hermione;
-            border: 0.7px solid base.$primary-hermione;
-            font-family: 'Avenir-Roman';
-            font-size: 0.8em;
-            height: 2.9em;
-          }
-
-          .form-accept-conditions {
-            font-family: 'Avenir-Roman';
-            margin-bottom: 0.3em;
-            margin-top: 0.5em;
-          }
-        }
-        .container-enterokay {
-          display: flex;
-          justify-content: center;
-          height: 12vh;
-          align-items: flex-end;
-          text-align: center;
-          color: #215e99;
-          color: base.$primary-harry;
-          .enterokay-question {
-            text-align: center;
-            color: base.$primary-harry;
-            font-size: calc(0.6em + 0.6vh);
-            font-family: 'Avenir-Roman';
-            margin: 3vh 0 1vh;
-            text-align: center;
-          }
-          .enterokay-link {
-            color: base.$primary-hermione;
-          }
-        }
-      }
-    }
-  }
 }
-
-// .modal {
-//   position: fixed;
-//   z-index: 1;
-//   padding-top: 143px; /* Location of the box */
-//   left: 0;
-//   top: 0;
-//   width: 100vw;
-//   height: 108vh;
-//   overflow: auto; /* Enable scroll if needed */
-//   background-color: rgb(0, 0, 0); /* Fallback color */
-//   background-color: rgba(0, 0, 0, 0.4);
-//   padding-top: 100%;
-
-//   .modal-content {
-//     display: flex;
-//     flex-direction: column;
-//     background-color: base.$secondary-dobby;
-//     margin: auto;
-//     padding: 0;
-//     border: 1px solid #888;
-//     width: 100vw;
-//     height: 52vh;
-//     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-//     -webkit-animation-name: animatetop;
-//     -webkit-animation-duration: 0.4s;
-//     animation-name: animatetop;
-//     animation-duration: 0.4s;
-//     border-radius: 15px;
-
-//     .modal-top-line {
-//       background: #c8c8c8;
-//       width: 23%;
-//     }
-//     .modal-top {
-//       display: flex;
-
-//       p {
-//         margin: 0;
-//       }
-//       .modal-close {
-//         color: base.$primary-harry;
-//         padding-left: 1.3em;
-//       }
-//       .modal-title {
-//         text-align: center;
-//         width: 85vw;
-//         font-size: 1.3em;
-//         color: base.$primary-harry;
-//         font-family: 'Avenir-Roman';
-//         font-weight: 600;
-//       }
-//     }
-
-//     .modal-wrapper-btn {
-//       padding: 5vh 3vh;
-//       height: 100vh;
-//       align-items: center;
-//       justify-content: center;
-
-//       .modal-btn {
-//         background-color: base.$secondary-dobby;
-//         color: base.$primary-harry;
-//         text-align: center;
-//         border: 0.7px solid base.$secondary-voldemort;
-//         box-sizing: border-box;
-//         border-radius: 4px;
-//         margin-bottom: 2vh;
-//         height: 7vh;
-
-//         .icon-btn {
-//           padding-right: 0.4em;
-//           font-size: calc(0.8em + 1vh);
-//         }
-//       }
-//     }
-//   }
-// }
-
-// left: 0;
-//     top: 0;
-//     width: 100vw;
-//     height: 11vh;
-//     padding-top: 0px;

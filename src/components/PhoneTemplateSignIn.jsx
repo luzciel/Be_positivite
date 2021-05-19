@@ -17,30 +17,30 @@ const PhoneTemplateSignIn = (props) => {
         <div className="wrapper-contents">
           <div className="wrapper-signIn-body">
             <div className="wrapper-signIn-form">
-            <section className="container-signIn-form">
-              <h5 className="title">
-                Inicie sesión para utilizar la aplicación
-              </h5>
-              <FormSignIn />
-            </section>
-            <section className="container-networks">
-              <button
-                className="btn btn-open-networks"
-                onClick={() => props.handleModal()}
-              >
-                {' '}
-                Iniciar sesión con otra cuenta
-              </button>
-            </section>
+              <div className="container-signIn-form">
+                <h5 className="title">
+                  Inicie sesión para utilizar la aplicación
+                </h5>
+                <FormSignIn />
+              </div>
+              <div className="container-networks">
+                <button
+                  className="btn btn-open-networks"
+                  onClick={() => props.handleModal()}
+                >
+                  {' '}
+                  Iniciar sesión con otra cuenta
+                </button>
+              </div>
             </div>
-          <section className="container-new-user">
-            <p className="new-user">
-              ¿Eres un nuevo usuario?{' '}
-              <span>
-                <Link to="/SignUp">Crear una cuenta</Link>
-              </span>
-            </p>
-          </section>
+            <div className="container-new-user">
+              <p className="new-user">
+                ¿Eres un nuevo usuario?{' '}
+                <span>
+                  <Link to="/SignUp">Crear una cuenta</Link>
+                </span>
+              </p>
+            </div>
           </div>
           <footer>
             <hr />
